@@ -5,6 +5,17 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body{
+    background-color: rgb();
+}
+
 h1{
   margin: 175px 0 35px 0;
+  font-size: 45px;
+}
+
+button{
+    font-size: 19px;
+    padding: 7px;
+    width:175px;
 }
