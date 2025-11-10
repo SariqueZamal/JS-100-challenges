@@ -18,4 +18,10 @@ button{
     font-size: 19px;
     padding: 7px;
     width:175px;
+    margin-bottom: 13px;
+}
+
+p{
+    font-size: 23px;
+    font-weight: bolder;
 }
