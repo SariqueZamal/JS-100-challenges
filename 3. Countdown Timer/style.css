@@ -2,10 +2,21 @@
   box-sizing: border-box;
   margin: 0;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-align: center;
 }
 
 img{
     width:45%;
     margin: 125px 35px 0 25px;
     float: left;
+}
+
+
+.deadline-format{
+    margin-top: 75px;
+    background-color: hsl(209, 61%, 16%);
+    width: 75px;
+    height: 75px;
+    margin: 3px;
+    float:right;
 }
