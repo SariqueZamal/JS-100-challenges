@@ -14,9 +14,9 @@ img{
 
 .deadline-format{
     margin-top: 75px;
+    margin-right: 75px;
     background-color: hsl(209, 61%, 16%);
     width: 75px;
     height: 75px;
-    margin: 3px;
     float:right;
 }
