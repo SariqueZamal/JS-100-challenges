@@ -5,24 +5,31 @@
   text-align: center;
 }
 
-body{
+body {
   padding: 121px 45px 35px 25px;
 }
 
-img{
-    width:45%;
-    margin-right: 45px;
-    float: left;
+img {
+  width: 45%;
+  margin-right: 45px;
+  float: left;
 }
 
+h1 {
+  margin: -7px 0 21px 0;
+}
 
-.deadline-format{
-    margin: 35px 0 0 55px;
-    background-color: hsl(209, 61%, 16%);
-    font-size: 19px;
-    padding: 11px;
-    width: 85px;
-    height: 75px;
-    float: inline-start;
-    color:white;
-  }
+h3 {
+  margin: 0 0 15px 0;
+}
+
+.deadline-format {
+  margin: 35px 0 0 55px;
+  background-color: hsl(209, 61%, 16%);
+  font-size: 19px;
+  padding: 11px;
+  width: 85px;
+  height: 75px;
+  float: inline-start;
+  color: white;
+}
