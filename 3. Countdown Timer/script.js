@@ -7,7 +7,8 @@ let secs = document.querySelector(".secs");
 setInterval(function updateTime() {}, 1000);
 
 let date = new Date();
-const next7days = date.getTime() + 7 * 24 * 60 * 60 * 1000; // add next 7 days time
+const next7days = date.getTime() + 7 * 28 * 60 * 60 * 1000; // add next 7 days time
+console.log(date.getHours() - new Date(next7days).getHours())
 console.log(new Date(next7days));
 
 const daysOfWeek = [
@@ -20,4 +21,18 @@ const daysOfWeek = [
   "Saturday",
 ];
 
+const monthNames = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
 console.log(daysOfWeek[date.getDay()]);
