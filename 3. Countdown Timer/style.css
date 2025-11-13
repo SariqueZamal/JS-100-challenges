@@ -5,15 +5,19 @@
   text-align: center;
 }
 
+body{
+  padding: 121px 45px 35px 25px;
+}
+
 img{
     width:45%;
-    margin: 125px 35px 0 25px;
+    margin-right: 45px;
     float: left;
 }
 
 
 .deadline-format{
-    margin: 75px 0 0 55px;
+    margin: 35px 0 0 55px;
     background-color: hsl(209, 61%, 16%);
     font-size: 19px;
     padding: 11px;
