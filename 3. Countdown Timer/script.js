@@ -1,4 +1,4 @@
-let giveAway = document.querySelector("h1");
+let giveAway = document.querySelector("h3");
 let days = document.querySelector(".days");
 let hours = document.querySelector(".hours");
 let mins = document.querySelector(".mins");
@@ -30,15 +30,21 @@ const monthNames = [
 ];
 // console.log(daysOfWeek[date.getDay()]);
 
+setInterval(function updateGiveAwayTime() {
+  let date = new Date();
+  // Find after 7 days time
+  const giveAway = date.getTime() + 24 * 2 * 60 * 60 * 1000;
+  let giveAwayday = daysOfWeek[giveAway.getDay()];
+  let giveAwaymonth = monthNames[giveAway.getMonth()];
+  let giveAwayYear = monthNames[giveAway.getFullYear()];
+  let currTime = date.getHours();
 
-setInterval(function updateGiveAwayTime(){
 
-}, 1000);
+
+}, 100000);
 
 setInterval(function updateTime() {}, 1000);
 
-
 let date = new Date();
-const next7days = date.getTime() + 7 * 2 * 60 * 60 * 1000; // add next 7 days time
-console.log(date.getHours() - new Date(next7days).getHours())
+console.log(date.getHours() - new Date(next7days).getHours());
 console.log(new Date(next7days));
