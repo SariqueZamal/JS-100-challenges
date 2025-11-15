@@ -58,11 +58,11 @@ function updateTime() {
 
   let diffInMilliseconds = Math.abs(giveAwayDate.getTime() - date.getTime());
 
-  // if (currHour > 11 && currMin > 30) {
-  //   days.innerText = `${diffInMilliseconds / (1000 * 60 * 60 * 24) - 1}`;
-  // } else {
-  //   days.innerText = `${diffInMilliseconds / (1000 * 60 * 60 * 24)}`;
-  // }
+  if (currHour > 11 && currMin > 30) {
+    days.innerText = `${diffInMilliseconds / (1000 * 60 * 60 * 24) - 1}`;
+  } else {
+    days.innerText = `${diffInMilliseconds / (1000 * 60 * 60 * 24)}`;
+  }
 
   // if (currMin >= 30 && currsec > 0) {
   //   hours.innerText = `${Math.abs(23 - (currHour - 11))}`;
