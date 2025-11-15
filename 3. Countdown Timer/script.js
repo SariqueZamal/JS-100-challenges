@@ -30,21 +30,25 @@ const monthNames = [
 ];
 // console.log(daysOfWeek[date.getDay()]);
 
-setInterval(function updateGiveAwayTime() {
+function updateGiveAwayTime() {
   let date = new Date();
   // Find after 7 days time
-  const giveAway = date.getTime() + 24 * 2 * 60 * 60 * 1000;
-  let giveAwayday = daysOfWeek[giveAway.getDay()];
-  let giveAwaymonth = monthNames[giveAway.getMonth()];
-  let giveAwayYear = monthNames[giveAway.getFullYear()];
+  const after7days = date.getTime() + 24 * 18 * 60 * 60 * 1000;
+  const giveAwayDate = new Date(after7days)
+  let giveAwayday = daysOfWeek[giveAwayDate.getDay()];
+  let giveAwaydate = giveAwayDate.getDate();
+  let giveAwaymonth = monthNames[giveAwayDate.getMonth()];
+  let giveAwayYear = giveAwayDate.getFullYear();
   let currTime = date.getHours();
 
+  giveAway.innerText = `Giveaway ends on ${giveAwayday}, ${giveAwaydate} ${giveAwaymonth} ${giveAwayYear} 11:30am`
 
+};
 
-}, 100000);
+updateGiveAwayTime();
 
 setInterval(function updateTime() {}, 1000);
 
 let date = new Date();
-console.log(date.getHours() - new Date(next7days).getHours());
-console.log(new Date(next7days));
+// console.log(date.getHours() - new Date(next7days).getHours());
+// console.log(new Date(next7days));
