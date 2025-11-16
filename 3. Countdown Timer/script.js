@@ -63,17 +63,17 @@ function updateTime() {
   let diffInMilliseconds = Math.abs(giveAwayTime.getTime() - date.getTime());
   let totalSec = diffInMilliseconds / 1000;
  
-  // update hours
-  let hr = Math.floor(totalSec / 86400);
-  totalSec = totalSec - hr * 3600; 
+  // update days
+  let d = Math.floor(totalSec / 86400);
+  totalSec = totalSec - d * 86400; 
 
-  // updtae min
-  let m = 
-  days.innerText = `${hr}`;
+  // updtae hours
+  let hr = Math.floor(totalSec / 3600);
+  totalSec = totalSec - hr * 3600;
 
-  
-
-  hours.innerText = secs;
+  // update min
+  days.innerText = `${d}`;
+  hours.innerText = `${hr}`;
 }
 
 updateTime();
