@@ -46,11 +46,11 @@ function updateGiveAwayTime() {
 
 updateGiveAwayTime(); // Initial Call
 
-// Update Time in every second
+// initial Update Time once browser load
 function updateTime() {
   let date = new Date();
 
-
+  // initialize give away time
   const giveAwayTime = new Date(
     giveAwayYear,
     giveAwaymonthIndex,
@@ -63,10 +63,10 @@ function updateTime() {
 
   let diffInMilliseconds = Math.abs(giveAwayTime.getTime() - date.getTime());
   let totalSec = diffInMilliseconds / 1000;
- 
+
   // update days
   let d = Math.floor(totalSec / 86400);
-  totalSec = totalSec - d * 86400; 
+  totalSec = totalSec - d * 86400;
 
   // updtae hours
   let hr = Math.floor(totalSec / 3600);
@@ -85,4 +85,6 @@ function updateTime() {
 }
 
 updateTime();
+
+// Update Time in every second
 setInterval(updateTime, 1000);
