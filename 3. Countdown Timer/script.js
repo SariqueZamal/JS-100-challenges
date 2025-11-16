@@ -58,7 +58,7 @@ function updateTime() {
 
   let diffInMilliseconds = Math.abs(giveAwayDate.getTime() - date.getTime());
 
-  if (currHour > 11 && currMin > 30) {
+  if (giveAwayDate.getTime() > ((11 * 3600000) + (30 * 60000)) ) {
     days.innerText = `${diffInMilliseconds / (1000 * 60 * 60 * 24) - 1}`;
   } else {
     days.innerText = `${diffInMilliseconds / (1000 * 60 * 60 * 24)}`;
