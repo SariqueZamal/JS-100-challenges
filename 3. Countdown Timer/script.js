@@ -31,7 +31,7 @@ const monthNames = [
 
 let date = new Date();
 // Find after 7 days time
-const after7days = date.getTime() + 24 * 7 * 60 * 60 * 1000;
+const after7days = date.getTime() + 24 * 9 * 60 * 60 * 1000;
 const giveAwayDate = new Date(after7days);
 let giveAwayDay = daysOfWeek[giveAwayDate.getDay()];
 let giveAwaydate = giveAwayDate.getDate();
@@ -50,6 +50,7 @@ updateGiveAwayTime(); // Initial Call
 function updateTime() {
   let date = new Date();
 
+  
   const giveAwayTime = new Date(
     giveAwayYear,
     giveAwaymonthIndex,
@@ -59,7 +60,7 @@ function updateTime() {
     0,
     0
   );
-
+console.log(giveAwayTime.getHours())
   let diffInMilliseconds = Math.abs(giveAwayTime.getTime() - date.getTime());
   let totalSec = diffInMilliseconds / 1000;
  
@@ -72,8 +73,15 @@ function updateTime() {
   totalSec = totalSec - hr * 3600;
 
   // update min
+  let m = Math.floor(totalSec / 60);
+  totalSec = totalSec - m * 60;
+
+  let s = Math.floor(totalSec);
+
   days.innerText = `${d}`;
   hours.innerText = `${hr}`;
+  mins.innerText = `${m}`;
+  secs.innerText = `${s}`;
 }
 
 updateTime();
