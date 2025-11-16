@@ -84,7 +84,7 @@ function updateTime() {
   secs.innerText = `${s}`;
 }
 
-updateTime();
+updateTime(); // initial call
 
 // Update Time in every second
 setInterval(updateTime, 1000);
