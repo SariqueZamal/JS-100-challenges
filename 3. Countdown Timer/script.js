@@ -29,17 +29,18 @@ const monthNames = [
   "December",
 ];
 
+let date = new Date();
+// Find after 7 days time
+const after7days = date.getTime() + 24 * 7 * 60 * 60 * 1000;
+const giveAwayDate = new Date(after7days);
+let giveAwayDay = daysOfWeek[giveAwayDate.getDay()];
+let giveAwaydate = giveAwayDate.getDate();
+let giveAwaymonthIndex = giveAwayDate.getMonth();
+let giveAwaymonth = monthNames[giveAwayDate.getMonth()];
+let giveAwayYear = giveAwayDate.getFullYear();
+
 // Logic for Give Away Time update
 function updateGiveAwayTime() {
-  let date = new Date();
-  // Find after 7 days time
-  const after7days = date.getTime() + 24 * 7 * 60 * 60 * 1000;
-  const giveAwayDate = new Date(after7days);
-  let giveAwayDay = daysOfWeek[giveAwayDate.getDay()];
-  let giveAwaydate = giveAwayDate.getDate();
-  let giveAwaymonth = monthNames[giveAwayDate.getMonth()];
-  let giveAwayYear = giveAwayDate.getFullYear();
-
   giveAway.innerText = `Giveaway ends on ${giveAwayDay}, ${giveAwaydate} ${giveAwaymonth} ${giveAwayYear} 11:30 am`;
 }
 
@@ -48,33 +49,32 @@ updateGiveAwayTime(); // Initial Call
 // Update Time in every second
 function updateTime() {
   let date = new Date();
-  const after7days = date.getTime() + 24 * 7 * 60 * 60 * 1000;
-  const giveAwayDate = new Date(after7days);
 
-  let currDay = daysOfWeek[date.getDay()];
-  let currHour = date.getHours();
-  let currMin = date.getMinutes();
-  let currsec = date.getSeconds();
+  const giveAwayTime = new Date(
+    giveAwayYear,
+    giveAwaymonthIndex,
+    giveAwaydate,
+    11,
+    30,
+    0,
+    0
+  );
 
-  let diffInMilliseconds = Math.abs(giveAwayDate.getTime() - date.getTime());
+  let diffInMilliseconds = Math.abs(giveAwayTime.getTime() - date.getTime());
+  let totalSec = diffInMilliseconds / 1000;
+ 
+  // update hours
+  let hr = Math.floor(totalSec / 86400);
+  totalSec = totalSec - hr * 3600; 
 
-  if (giveAwayDate.getTime() > ((11 * 3600000) + (30 * 60000)) ) {
-    days.innerText = `${diffInMilliseconds / (1000 * 60 * 60 * 24) - 1}`;
-  } else {
-    days.innerText = `${diffInMilliseconds / (1000 * 60 * 60 * 24)}`;
-  }
+  // updtae min
+  let m = 
+  days.innerText = `${hr}`;
 
-  // if (currMin >= 30 && currsec > 0) {
-  //   hours.innerText = `${Math.abs(23 - (currHour - 11))}`;
-  // } else {
-  //   hours.innerText = `${Math.abs(24 - (currHour - 11))}`;
-  // }
-  // hours.innerText = `${Math.abs(23 - (currHour - 11))}`;
-  // mins.innerText = `${Math.abs(30 - currMin)}`;
+  
+
+  hours.innerText = secs;
 }
 
 updateTime();
 // setInterval(updateTime, 1000);
-
-// console.log(date.getHours() - new Date(next7days).getHours());
-// console.log(new Date(next7days));
