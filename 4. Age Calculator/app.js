@@ -11,6 +11,9 @@ button.addEventListener("click", function () {
     date.valueAsDate.getFullYear() < 1900
   ) {
     para.innerText = "please put the valid Date.";
+    setTimeout(function () {
+      para.innerText = "";
+    }, 1000);
     return;
   }
 
