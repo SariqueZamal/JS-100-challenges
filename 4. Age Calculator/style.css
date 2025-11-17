@@ -1,4 +1,25 @@
 *{
     box-sizing: border-box;
     margin: 0;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+
+body{
+    background-color: rgb(228, 234, 234);
+}
+
+h1{
+    margin: 145px 0 25px 0;
+}
+
+input {
+    width: 145px;
+    font-size: 17px;
+}
+
+button{
+    width: 95px;
+    font-size: 17px;
 }
