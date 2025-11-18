@@ -5,11 +5,12 @@ let para = document.querySelector("p");
 button.addEventListener("click", function () {
   let currDate = new Date();
 
-  if(
+  // If invalid date
+  if (
     date.valueAsDate == null ||
     date.valueAsDate > currDate ||
-    date.valueAsDate.getFullYear() < 1900){
-
+    date.valueAsDate.getFullYear() < 1900
+  ) {
     para.innerText = "please enter the valid date.";
     setTimeout(function () {
       para.innerText = "";
@@ -17,8 +18,10 @@ button.addEventListener("click", function () {
     return;
   }
 
-  let diffInDays = Math.floor((currDate.getTime() - date.valueAsDate.getTime()) / (1000 * 60 * 60 * 24));
-  let years = Math.floor(diffInDays / 365 );
+  let diffInDays = Math.floor(
+    (currDate.getTime() - date.valueAsDate.getTime()) / (1000 * 60 * 60 * 24)
+  );
+  let years = Math.floor(diffInDays / 365);
   diffInDays -= years * 365;
   para.innerText = `You are ${years} years & ${diffInDays} days old.`;
 
@@ -51,5 +54,5 @@ button.addEventListener("click", function () {
   //     let age = (currDate.getFullYear() - date.valueAsDate.getFullYear())- 1;
   //     para.innerText = `You are ${age} years old.`;
   //     return;
-  //   }   
-}); 
+  //   }
+});
