@@ -18,6 +18,7 @@ button.addEventListener("click", function () {
     return;
   }
 
+  // calculate difference in days 
   let diffInDays = Math.floor(
     (currDate.getTime() - date.valueAsDate.getTime()) / (1000 * 60 * 60 * 24)
   );
@@ -25,6 +26,7 @@ button.addEventListener("click", function () {
   diffInDays -= years * 365;
   para.innerText = `You are ${years} years & ${diffInDays} days old.`;
 
+  // second logic
   // if (date.valueAsDate.getFullYear() == currDate.getFullYear() &&
   //   (currDate.getTime() - date.valueAsDate.getTime()) / (1000 * 60 * 60 * 24) < 30){
   //     let age = Math.floor((currDate.getTime() - date.valueAsDate.getTime()) / (1000 * 60 * 60 * 24));
