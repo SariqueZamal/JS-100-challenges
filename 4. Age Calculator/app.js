@@ -38,7 +38,8 @@ button.addEventListener("click", function () {
     else if (date.valueAsDate.getMonth() <= currDate.getMonth() &&
      (date.valueAsDate.getDate() <= currDate.getDate())) {
       let age = currDate.getFullYear() - date.valueAsDate.getFullYear();
-      para.innerText = `You are ${age} years old.`;
+      let month = currDate.getMonth() - date.valueAsDate.getMonth();
+      para.innerText = `You are ${age} years & ${month} months old.`;
       return;
     }
      else {
@@ -46,4 +47,4 @@ button.addEventListener("click", function () {
       para.innerText = `You are ${age} years old.`;
       return;
     }   
-});
+}); 
