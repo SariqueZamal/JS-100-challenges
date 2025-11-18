@@ -17,34 +17,39 @@ button.addEventListener("click", function () {
     return;
   }
 
-  if (date.valueAsDate.getFullYear() == currDate.getFullYear() &&
-    (currDate.getTime() - date.valueAsDate.getTime()) / (1000 * 60 * 60 * 24) < 30){
-      let age = Math.floor((currDate.getTime() - date.valueAsDate.getTime()) / (1000 * 60 * 60 * 24));
-      para.innerText = `You are ${age} days old.`;
-      return;
-    }
-    else if (date.valueAsDate.getFullYear() == currDate.getFullYear() &&
-    currDate.getDate() >= date.valueAsDate.getDate()){
-      let age = currDate.getMonth() - date.valueAsDate.getMonth();
-      para.innerText = `You are ${age} months old.`;
-      return;
-    }
-    else if (date.valueAsDate.getFullYear() == currDate.getFullYear() &&
-    currDate.getDate() < date.valueAsDate.getDate()){
-      let age = (currDate.getMonth() - date.valueAsDate.getMonth()) - 1;
-      para.innerText = `You are ${age} months old.`;
-      return;
-    }
-    else if (date.valueAsDate.getMonth() <= currDate.getMonth() &&
-     (date.valueAsDate.getDate() <= currDate.getDate())) {
-      let age = currDate.getFullYear() - date.valueAsDate.getFullYear();
-      let month = currDate.getMonth() - date.valueAsDate.getMonth();
-      para.innerText = `You are ${age} years & ${month} months old.`;
-      return;
-    }
-     else {
-      let age = (currDate.getFullYear() - date.valueAsDate.getFullYear())- 1;
-      para.innerText = `You are ${age} years old.`;
-      return;
-    }   
+  let diffInDays = Math.floor((currDate.getTime() - date.valueAsDate.getTime()) / (1000 * 60 * 60 * 24));
+  let years = Math.floor(diffInDays / 365 );
+  diffInDays -= years * 365;
+  para.innerText = `You are ${years} years & ${diffInDays} days old.`;
+
+  // if (date.valueAsDate.getFullYear() == currDate.getFullYear() &&
+  //   (currDate.getTime() - date.valueAsDate.getTime()) / (1000 * 60 * 60 * 24) < 30){
+  //     let age = Math.floor((currDate.getTime() - date.valueAsDate.getTime()) / (1000 * 60 * 60 * 24));
+  //     para.innerText = `You are ${age} days old.`;
+  //     return;
+  //   }
+  //   else if (date.valueAsDate.getFullYear() == currDate.getFullYear() &&
+  //   currDate.getDate() >= date.valueAsDate.getDate()){
+  //     let age = currDate.getMonth() - date.valueAsDate.getMonth();
+  //     para.innerText = `You are ${age} months old.`;
+  //     return;
+  //   }
+  //   else if (date.valueAsDate.getFullYear() == currDate.getFullYear() &&
+  //   currDate.getDate() < date.valueAsDate.getDate()){
+  //     let age = (currDate.getMonth() - date.valueAsDate.getMonth()) - 1;
+  //     para.innerText = `You are ${age} months old.`;
+  //     return;
+  //   }
+  //   else if (date.valueAsDate.getMonth() <= currDate.getMonth() &&
+  //    (date.valueAsDate.getDate() <= currDate.getDate())) {
+  //     let age = currDate.getFullYear() - date.valueAsDate.getFullYear();
+  //     let month = currDate.getMonth() - date.valueAsDate.getMonth();
+  //     para.innerText = `You are ${age} years & ${month} months old.`;
+  //     return;
+  //   }
+  //    else {
+  //     let age = (currDate.getFullYear() - date.valueAsDate.getFullYear())- 1;
+  //     para.innerText = `You are ${age} years old.`;
+  //     return;
+  //   }   
 }); 
