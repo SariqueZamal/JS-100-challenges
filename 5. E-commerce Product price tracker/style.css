@@ -7,13 +7,15 @@
 }
 
 #search {
-  padding-top: 125px;
+  margin: 75px;
+  padding: 75px;
   align-content: center;
+  background-color: rgb(247, 247, 245);
+  box-shadow:rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 input {
-  display: block;
-  margin: 15px 0 15px 31vw;
+  margin: 15px 0 15px 0;
   width: 475px;
   font-size: 17px;
   font-weight: 200;
