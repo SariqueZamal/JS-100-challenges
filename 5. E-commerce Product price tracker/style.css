@@ -19,6 +19,11 @@ input {
   width: 475px;
   font-size: 17px;
   font-weight: 200;
+  border: light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+}
+
+input:hover{
+  box-shadow:rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 button {
