@@ -2,12 +2,15 @@ let mobile = document.querySelector("#mobile");
 let button = document.querySelector("button");
 let para = document.querySelector("p");
 
+para.style.color = "red";
+
 button.addEventListener("click", function () {
   let trimVal = mobile.value.trim();
   if (trimVal === "" || trimVal.length < 10 || trimVal.length > 10) {
     para.innerText = "Please enter valid 10 digits mobile Number";
     setTimeout(() => {
       para.innerText = "";
+      mobile.value = "";
     }, 1000);
     return;
   }
@@ -17,6 +20,7 @@ button.addEventListener("click", function () {
     para.innerText = "Please enter valid 10 digits mobile Number";
     setTimeout(() => {
       para.innerText = "";
+      mobile.value = "";
     }, 1000);
     return;
   }
@@ -30,4 +34,5 @@ button.addEventListener("click", function () {
   para.style.color = "violet";
 
   mobile.value = "";
+  return;
 });
