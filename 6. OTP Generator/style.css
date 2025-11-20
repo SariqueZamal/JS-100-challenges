@@ -1,6 +1,16 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+
+#container {
+  margin: 75px;
+  padding: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+label{
+    font-weight:400;
 }

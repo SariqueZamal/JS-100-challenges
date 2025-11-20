@@ -1,1 +1,1 @@
-let mobile = document.querySelector()
+let mobile = document.querySelector("#mobile")
