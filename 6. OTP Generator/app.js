@@ -30,7 +30,7 @@ button.addEventListener("click", function () {
     otp += Math.floor(Math.random() * 10);
   }
 
-  para.innerText = otp;
+  para.innerText = `OTP is : ${otp}`;
   para.style.color = "violet";
 
   mobile.value = "";
