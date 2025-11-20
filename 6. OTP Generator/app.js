@@ -1,0 +1,1 @@
+let mobile = document.querySelector()
