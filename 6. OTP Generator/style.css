@@ -33,3 +33,9 @@ button{
     background-color: rgb(154, 154, 247);
     border-radius: 7px;
 }
+
+p{
+    margin-top: 15px;
+    font-size: 17px;
+    color: red;
+}
