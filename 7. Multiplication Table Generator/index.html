@@ -4,15 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
     <title>Multiplication Table Generator</title>
   </head>
   <body>
     <div id="main">
       <h1>Multiplication Table</h1>
-      <input type="text" placeholder="Please enter a number; e.g 5" /><br />
+      <input type="text" id="number" placeholder="Please enter a number; e.g 5" /><br />
       <button>Get Table</button>
     </div>
-    <div id="result"></div>
+    <div id="result">
+        <p></p>
+    </div>
   </body>
 </html>
