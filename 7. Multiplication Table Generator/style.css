@@ -35,4 +35,5 @@ button:hover {
   margin: 0 95px 95px 95px;
   padding: 45px;
   box-shadow: rgb(0, 0, 0.5) 1px 2px 9px;
+  font-size: 19px;
 }
