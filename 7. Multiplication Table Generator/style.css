@@ -1,12 +1,38 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-align: center;
 }
 
-#main{
-    margin: 95px;
-    padding: 45px;
-    box-shadow: rgb(0,0,0.5) 1px 2px 9px;
+#main {
+  margin: 65px 95px 15px 95px;
+  padding: 45px;
+  box-shadow: rgb(0, 0, 0.5) 1px 2px 9px;
+}
+
+input {
+  width: 225px;
+  margin: 15px 0 15px 0;
+  height: 25px;
+  font-size: 15px;
+}
+
+button {
+  width: 125px;
+  height: 25px;
+  font-size: 15px;
+  background-color: blueviolet;
+  border: none;
+  border-radius: 7px;
+}
+
+button:hover {
+  background-color: rgb(177, 122, 228);
+}
+
+#result {
+  margin: 0 95px 95px 95px;
+  padding: 45px;
+  box-shadow: rgb(0, 0, 0.5) 1px 2px 9px;
 }
