@@ -11,3 +11,21 @@
     background-color: rgb(135, 192, 152);
     border-radius: 9px;
 }
+
+input{
+    margin: 15px 0 11px 0;
+    font-size: 15px;
+    width: 245px;
+    padding: 3px;
+}
+
+button{
+    width:145px;
+    font-size: 15px;
+    padding: 3px;
+    border: none;
+}
+
+button:hover{
+    background-color: rgb(178, 204, 182);
+}
