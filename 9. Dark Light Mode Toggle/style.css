@@ -2,5 +2,16 @@
     box-sizing: border-box;
     margin: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
+    text-align: end;
+}
+
+nav{
+    padding: 15px 45px 15px 0; 
+    background-color: black;
+    color: white;
+    font-size: 21px;
+}
+
+i{
+    margin-right: 15px;
 }
