@@ -15,6 +15,11 @@ one.addEventListener("click", () => {
     nav.style.backgroundColor = "white";
     nav.style.color = "black";
     body.style.backgroundColor = "black";
+  } else {
+    nav.innerHTML = `<i id="one" class="fa-solid fa-toggle-off"></i>
+    <i id="two" class="fa-regular fa-moon"></i>`;
+    nav.style.backgroundColor = "black";
+    nav.style.color = "white";
+    body.style.backgroundColor = "white";
   }
-
 });
