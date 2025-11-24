@@ -5,6 +5,13 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+#container{
+    margin: 225px 95px;
+    padding: 35px;
+    background-color: rgb(229, 241, 237);
+    border-radius: 7px;
+}
+
 input{
     text-align: start;
 }
