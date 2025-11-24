@@ -1,17 +1,34 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  text-align: center;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 15px;
 }
 
-#container{
-    margin: 225px 95px;
-    padding: 35px;
-    background-color: rgb(229, 241, 237);
+#container {
+  margin: 225px 95px;
+  padding: 35px;
+  background-color: rgb(229, 241, 237);
+  border-radius: 7px;
+  box-shadow: rgb(0, 0, 0.5) 1px 2px 17px;
+}
+
+input {
+  width: 225px;
+  height: 25px;
+  text-align: start;
+}
+
+#totalMark{
+    margin: 9px 0 9px 0;
+}
+
+button{
+    width: 125px;
+    border: none;
+    background-color: rgb(123, 217, 144);
+    padding: 5px;
+    margin-bottom: 9px;
     border-radius: 7px;
-}
-
-input{
-    text-align: start;
 }
