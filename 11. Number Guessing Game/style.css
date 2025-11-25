@@ -6,7 +6,7 @@
 }
 
 #container{
-    margin: 195px 45px;
+    margin: 175px 45px;
     padding: 45px;
     background-color: rgb(142, 226, 173);
     border-radius: 7px;
@@ -24,4 +24,5 @@ button{
     width: 135px;
     border: none;
     font-weight: bolder;
+    margin-bottom: 11px;
 }
