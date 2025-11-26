@@ -10,4 +10,7 @@ button.addEventListener("click", ()=>{
             result.innerText = "";
         }, 1000);
     }
+
+    let random = Math.floor(Math.random() * 100) 
+    console.log(random)
 })
