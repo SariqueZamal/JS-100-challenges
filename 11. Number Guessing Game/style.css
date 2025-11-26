@@ -6,7 +6,7 @@
 }
 
 #container {
-  margin: 175px 45px;
+  margin: 165px 125px;
   padding: 45px;
   background-color: rgb(142, 226, 173);
   border-radius: 7px;
@@ -17,6 +17,7 @@ input {
   margin: 11px 0;
   width: 225px;
   padding: 3px;
+  border: none;
 }
 
 button {
