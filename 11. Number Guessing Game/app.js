@@ -5,12 +5,14 @@ let result = document.querySelector("p");
 button.addEventListener("click", ()=>{
     let number = Number(input.value);
     if(Number.isNaN(number) || number == 0){
+        result.style.color = "red";
         result.innerText = "Please Enter a valid Number";
         setTimeout(() => {
             result.innerText = "";
         }, 1000);
+        return;
     }
 
     let random = Math.floor(Math.random() * 100) 
-    console.log(random)
+    
 })
