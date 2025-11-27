@@ -10,7 +10,7 @@ body{
     padding: 225px;
 }
 
-button{
+.button{
     width:215px;
     padding: 9px;
     font-size: 21px;
