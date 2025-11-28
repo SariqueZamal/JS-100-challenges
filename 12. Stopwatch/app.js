@@ -4,3 +4,7 @@ let start = document.querySelector("#start");
 let min = "00";
 let sec = "00";
 let milliSec = "00";
+
+start.addEventListener("click",()=>{
+    
+})
