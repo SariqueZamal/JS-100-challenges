@@ -2,6 +2,7 @@ let result = document.querySelector("p");
 let start = document.querySelector("#start");
 let reset = document.querySelector("#reset");
 let stop = document.querySelector("#stop");
+let lap = document.querySelector("#lap")
 // let isRunning = false;
 
 let min = "0" + 0;
