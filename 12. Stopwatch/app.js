@@ -1,12 +1,14 @@
 let result = document.querySelector("p");
 let start = document.querySelector("#start");
 let reset = document.querySelector("#reset");
+let isRunning = false;
 
-let min = "0"+0;
-let sec = "0"+0;
+let min = "0" + 0;
+let sec = "0" + 0;
 let milliSec = 0;
 
 start.addEventListener("click", () => {
+    start.innerText = "Stop";
   setInterval(() => {
     milliSec++;
     if (milliSec < 10) {
@@ -19,9 +21,13 @@ start.addEventListener("click", () => {
         }
         milliSec = milliSec - 100;
     }
+    else if(sec == 60){
+        min++;
+        if(min < 10){
+            min = "0" + min;
+        }
+        sec = sec - 60;
+    }
     result.innerText = `${min}:${sec}:${milliSec}`;
-    //   if (milliSec < 100) {
-    //   } else if ((milliSec >= 100) & (sec < 60)) {
-    //   }
   }, 10);
 });

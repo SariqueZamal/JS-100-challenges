@@ -25,6 +25,17 @@ p{
     border-radius: 35px;
     color: white;
 }
+#stop{
+    width:275px;
+    margin: 25px 0 7px 0;
+    padding: 27px 13px;
+    font-size: 21px;
+    background-color:blueviolet;
+    border: none;
+    border-radius: 35px;
+    color: white;
+    visibility: hidden;
+}
 
 #reset{
     width:275px;
