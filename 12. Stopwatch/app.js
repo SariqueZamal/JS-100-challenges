@@ -8,6 +8,11 @@ let min = "0" + 0;
 let sec = "0" + 0;
 let milliSec = 0;
 
+
+reset.addEventListener("click", () => {
+  result.innerText = `00:00.00`;
+});
+
 let updateTime;
 
 startStop.addEventListener("click", () => {
@@ -33,7 +38,8 @@ startStop.addEventListener("click", () => {
         }
         sec = sec - 60;
       }
-      result.innerText = `${min}:${sec}:${milliSec}`;
+      result.innerText = `${min}:${sec}.${milliSec}`;
+      
     }, 10);
   } else {
     isRunning = false;
@@ -43,3 +49,4 @@ startStop.addEventListener("click", () => {
     return;
   }
 });
+
