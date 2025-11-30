@@ -1,7 +1,6 @@
 let result = document.querySelector("p");
-let start = document.querySelector("#start");
+let startStop = document.querySelector("#startStop");
 let reset = document.querySelector("#reset");
-let stop = document.querySelector("#stop");
 let lap = document.querySelector("#lap");
 let isRunning = false;
 
@@ -9,12 +8,13 @@ let min = "0" + 0;
 let sec = "0" + 0;
 let milliSec = 0;
 
-start.addEventListener("click", () => {
+startStop.addEventListener("click", () => {
   if (!isRunning) {
     isRunning = true;
-    start.style.visibility = "hidden";
-    stop.style.visibility = "visible";
-    setInterval(() => {
+    startStop.innerText = "Stop";
+    reset.style.visibility = "visible";
+    lap.style.visibility = "visible";
+  setInterval(function updateTime(){
       milliSec++;
       if (milliSec < 10) {
         milliSec = "0" + milliSec;
@@ -33,10 +33,12 @@ start.addEventListener("click", () => {
       }
       result.innerText = `${min}:${sec}:${milliSec}`;
     }, 10);
-  }
-});
-
-stop.addEventListener("click", () => {
-  stop.style.visibility = "hidden";
-  start.style.visibility = "visible";
+    } else {
+      isRunning = false;
+      startStop.innerText = "Start";
+      lap.style.visibility = "hidden";
+      clearInterval(updateTime, 1000);
+      result.innerText = `${min}:${sec}:${milliSec}`;
+      return;
+    }
 });

@@ -8,14 +8,15 @@
 body {
   background-color: black;
   color: white;
-  padding: 225px;
+  padding: 155px;
 }
 
 p {
   font-size: 55px;
+  margin-bottom: 45px;
 }
 
-#start {
+#startStop {
   width: 275px;
   margin: 25px 0 7px 0;
   padding: 27px 13px;
@@ -28,7 +29,7 @@ p {
 
 #reset {
   width: 275px;
-  margin: 0 0 25px 0;
+  margin: 0 0 5px 0;
   padding: 9px;
   font-size: 21px;
   background-color: rgb(69, 69, 69);
