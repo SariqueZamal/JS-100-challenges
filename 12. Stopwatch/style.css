@@ -8,7 +8,7 @@
 body {
   background-color: black;
   color: white;
-  padding: 125px;
+  padding: 75px;
 }
 
 p {
@@ -18,7 +18,7 @@ p {
 
 #startStop {
   width: 275px;
-  margin: 95px 0 7px 0;
+  margin: 65px 0 7px 0;
   padding: 27px 13px;
   font-size: 21px;
   background-color: blueviolet;
@@ -49,4 +49,21 @@ p {
   border-radius: 35px;
   color: white;
   visibility: hidden;
+}
+
+.lapContainer {
+  display: flex;
+  background-color: blueviolet;
+  margin: auto;
+  width: 50vw;
+  height: auto;
+}
+
+.lapContent {
+  width: 65px;
+  height: 65px;
+  padding: 9px;
+  margin: 9px;
+  font-size: 12px;
+  border: 0.2px solid white;
 }

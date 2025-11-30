@@ -61,12 +61,13 @@ lap.addEventListener("click", () => {
   if (lapCount === 0) {
     lapCount = 2;
     let lapContent1 = document.createElement("div");
+    lapContent1.classList.add("lapContent");
     let lapContent2 = document.createElement("div");
     let lapMin = min;
     let lapSec = sec;
     let lapMilliSec = milliSec;
 
-    lapContent1.innerHTML =`<p class="lapContent">1</p>
+    lapContent1.innerHTML =`1 </br>
     ${lapMin}:${lapSec}.${lapMilliSec}</br>
     ${lapMin}:${lapSec}.${lapMilliSec}
     `;
