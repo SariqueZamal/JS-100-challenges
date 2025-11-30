@@ -9,10 +9,6 @@ let sec = "0" + 0;
 let milliSec = 0;
 
 
-reset.addEventListener("click", () => {
-  result.innerText = `00:00.00`;
-});
-
 let updateTime;
 
 startStop.addEventListener("click", () => {
@@ -39,7 +35,6 @@ startStop.addEventListener("click", () => {
         sec = sec - 60;
       }
       result.innerText = `${min}:${sec}.${milliSec}`;
-      
     }, 10);
   } else {
     isRunning = false;
@@ -50,3 +45,13 @@ startStop.addEventListener("click", () => {
   }
 });
 
+
+reset.addEventListener("click", () => {
+  result.innerText = `00:00.00`;
+  isRunning = false;
+  reset.style.visibility = "hidden";
+  startStop.innerText = "Start";
+  lap.style.visibility = "hidden";
+  clearInterval(updateTime, 1000);
+  return;
+});
