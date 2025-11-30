@@ -2,12 +2,12 @@ let result = document.querySelector("p");
 let startStop = document.querySelector("#startStop");
 let reset = document.querySelector("#reset");
 let lap = document.querySelector("#lap");
+let lapContainer = document.querySelector(".lapContainer");
 let isRunning = false;
 
 let min = "0" + 0;
 let sec = "0" + 0;
 let milliSec = 0;
-
 
 let updateTime;
 
@@ -45,7 +45,6 @@ startStop.addEventListener("click", () => {
   }
 });
 
-
 reset.addEventListener("click", () => {
   result.innerText = `00:00.00`;
   isRunning = false;
@@ -54,4 +53,23 @@ reset.addEventListener("click", () => {
   lap.style.visibility = "hidden";
   clearInterval(updateTime, 1000);
   return;
+});
+
+
+let lapCount = 0;
+lap.addEventListener("click", () => {
+  if (lapCount === 0) {
+    lapCount = 2;
+    let lapContent1 = document.createElement("div");
+    let lapContent2 = document.createElement("div");
+    let lapMin = min;
+    let lapSec = sec;
+    let lapMilliSec = milliSec;
+
+    lapContent1.innerHTML =`<p class="lapContent">1</p>
+    ${lapMin}:${lapSec}.${lapMilliSec}</br>
+    ${lapMin}:${lapSec}.${lapMilliSec}
+    `;
+    lapContainer.append(lapContent1);
+  }
 });
