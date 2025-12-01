@@ -53,7 +53,7 @@ p {
 
 .lapContainer {
   display: flex;
-  background-color: blueviolet;
+  background-color: rgb(160, 105, 211);
   margin: auto;
   width: 50vw;
   height: auto;
