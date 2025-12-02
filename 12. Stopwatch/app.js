@@ -21,6 +21,7 @@ let updateTime;
 startStop.addEventListener("click", () => {
   if (!isRunning) {
     isRunning = true;
+    startStop.style.backgroundColor = "rgb(188, 70, 70)";
     startStop.innerText = "Stop";
     reset.style.visibility = "visible";
     // lap.style.visibility = "visible";
@@ -50,9 +51,9 @@ startStop.addEventListener("click", () => {
       // `;
       // }
     }, 10);
-  } 
-  else {
+  } else {
     isRunning = false;
+    startStop.style.backgroundColor = "blueviolet";
     startStop.innerText = "Start";
     // lap.style.visibility = "hidden";
     clearInterval(updateTime, 1000);
