@@ -43,6 +43,7 @@ startStop.addEventListener("click", () => {
         sec = sec - 60;
       }
       result.innerText = `${min}:${sec}.${milliSec}`;
+
       // if (isLap) {
       //   // lapUpdateTime();
       //   lapContainer.childNodes[lapCount - 1].innerHTML = `${lapCount} </br>
@@ -51,28 +52,34 @@ startStop.addEventListener("click", () => {
       // `;
       // }
     }, 10);
-  } else {
+  }
+   else {
     isRunning = false;
+
     startStop.style.backgroundColor = "blueviolet";
     startStop.innerText = "Start";
-    // lap.style.visibility = "hidden";
     clearInterval(updateTime, 1000);
+
+    // lap.style.visibility = "hidden";
     // clearInterval(lapUpdateTime, 1000);
     return;
   }
 });
 
 reset.addEventListener("click", () => {
-  result.innerText = `00:00.00`;
   isRunning = false;
+
+  result.innerText = `00:00.00`;
   reset.style.visibility = "hidden";
   startStop.innerText = "Start";
-  lap.style.visibility = "hidden";
   clearInterval(updateTime, 1000);
+
+  // lap.style.visibility = "hidden";
   // clearInterval(lapUpdateTime, 1000);
-  isLap = false;
+  // isLap = false;
   return;
 });
+
 
 // let lapCount = 0;
 
