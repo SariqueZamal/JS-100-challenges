@@ -1,10 +1,13 @@
 let result = document.querySelector("p");
 let startStop = document.querySelector("#startStop");
 let reset = document.querySelector("#reset");
+let isRunning = false;
+
+
 // let lap = document.querySelector("#lap");
 // let lapContainer = document.querySelector(".lapContainer");
 // let isLap = false;
-let isRunning = false;
+
 
 let min = "0" + 0;
 let sec = "0" + 0;
@@ -12,11 +15,13 @@ let milliSec = 0;
 
 let updateTime;
 
+
 // let lapM = "0" + 0;
 // let lapS = "0" + 0;
 // let lapMilli = "0" + 0;
 
 // let lapUpdateTime;
+
 
 startStop.addEventListener("click", () => {
   if (!isRunning) {
