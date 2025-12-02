@@ -23,7 +23,7 @@ startStop.addEventListener("click", () => {
     isRunning = true;
     startStop.innerText = "Stop";
     reset.style.visibility = "visible";
-    lap.style.visibility = "visible";
+    // lap.style.visibility = "visible";
     updateTime = setInterval(() => {
       milliSec++;
       if (milliSec < 10) {
@@ -54,7 +54,7 @@ startStop.addEventListener("click", () => {
   else {
     isRunning = false;
     startStop.innerText = "Start";
-    lap.style.visibility = "hidden";
+    // lap.style.visibility = "hidden";
     clearInterval(updateTime, 1000);
     // clearInterval(lapUpdateTime, 1000);
     return;
