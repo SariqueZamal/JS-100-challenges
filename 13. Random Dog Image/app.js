@@ -8,7 +8,7 @@ xhr.responseType = "json";
 
 xhr.onload = ()=>{
 console.log(xhr)
-image.src = xhr.response
+image.src = xhr.response.message;
 }
 
 xhr.open('GET',"https://dog.ceo/api/breeds/image/random");
