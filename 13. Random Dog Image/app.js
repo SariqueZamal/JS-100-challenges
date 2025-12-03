@@ -4,12 +4,14 @@ let button = document.querySelector("button");
 button.addEventListener("click", ()=>{
 let xhr = new XMLHttpRequest();
 
-xhr.responseType = "JSON";
-xhr.onload = ()=>{
+xhr.responseType = "json";
 
+xhr.onload = ()=>{
+console.log(xhr)
+image.src = xhr.response
 }
 
-xhr.open('GET',"");
+xhr.open('GET',"https://dog.ceo/api/breeds/image/random");
 xhr.send();
 
 })
