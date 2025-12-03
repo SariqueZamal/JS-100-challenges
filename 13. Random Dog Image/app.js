@@ -18,5 +18,4 @@ console.log(xhr);
 
 xhr.open('GET',"https://dog.ceo/api/breeds/image/random");
 xhr.send();
-
 })
