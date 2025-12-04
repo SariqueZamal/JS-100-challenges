@@ -7,3 +7,9 @@
 body{
     padding-top: 95px;
 }
+
+button{
+    margin: 15px;
+    width: 165px;
+    padding: 4px;
+}
