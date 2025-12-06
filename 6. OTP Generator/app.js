@@ -31,7 +31,7 @@ button.addEventListener("click", function () {
   }
 
   para.innerText = `OTP is : ${otp}`;
-  para.style.color = "violet";
+  para.style.color = "green";
 
   mobile.value = "";
   return;
