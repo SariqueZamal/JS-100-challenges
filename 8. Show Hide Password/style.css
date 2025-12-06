@@ -30,3 +30,7 @@ button{
 button:hover{
     background-color: rgb(178, 204, 182);
 }
+
+p{
+    margin-top: 9px;
+}
