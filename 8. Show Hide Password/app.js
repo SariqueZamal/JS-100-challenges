@@ -2,7 +2,10 @@ let input = document.querySelector("input");
 let button = document.querySelector("button");
 
 button.addEventListener("click", ()=>{
-    if(input.type == "password"){
+    if(input.value.trim() ==""){
+        
+    }
+    else if(input.type == "password"){
         input.type = "text";
         button.innerText = "Hide Password";
     }
