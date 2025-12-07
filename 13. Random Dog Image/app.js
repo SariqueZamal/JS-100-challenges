@@ -13,7 +13,7 @@ xhr.responseType = "json";
 
 xhr.addEventListener("load", ()=>{
 image.src = xhr.response.message;
-console.log(xhr);
+// console.log(xhr);
 })
 
 xhr.open('GET',"https://dog.ceo/api/breeds/image/random");
