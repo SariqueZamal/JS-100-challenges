@@ -3,11 +3,9 @@ let startStop = document.querySelector("#startStop");
 let reset = document.querySelector("#reset");
 let isRunning = false;
 
-
 // let lap = document.querySelector("#lap");
 // let lapContainer = document.querySelector(".lapContainer");
 // let isLap = false;
-
 
 let min = "0" + 0;
 let sec = "0" + 0;
@@ -15,13 +13,11 @@ let milliSec = 0;
 
 let updateTime;
 
-
 // let lapM = "0" + 0;
 // let lapS = "0" + 0;
 // let lapMilli = "0" + 0;
 
 // let lapUpdateTime;
-
 
 startStop.addEventListener("click", () => {
   if (!isRunning) {
@@ -57,8 +53,7 @@ startStop.addEventListener("click", () => {
       // `;
       // }
     }, 10);
-  }
-   else {
+  } else {
     isRunning = false;
 
     startStop.style.backgroundColor = "blueviolet";
@@ -76,6 +71,7 @@ reset.addEventListener("click", () => {
 
   result.innerText = `00:00.00`;
   reset.style.visibility = "hidden";
+  startStop.style.backgroundColor = "blueviolet";
   startStop.innerText = "Start";
   clearInterval(updateTime, 1000);
 
@@ -84,7 +80,6 @@ reset.addEventListener("click", () => {
   // isLap = false;
   return;
 });
-
 
 // let lapCount = 0;
 
