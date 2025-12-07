@@ -29,7 +29,7 @@ button.addEventListener("click", () => {
     return;
   } else {
     input.value = "";
-    result.style.color = "blue";
+    result.style.color = "red";
     result.innerText = `You entered the wrong anwer.
         Correct ans is ${random}.`;
   }
