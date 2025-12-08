@@ -23,7 +23,9 @@ function getMeaning(word) {
       result.innerHTML = `<p id="error">Sorry Dude, we couldn't find definitions for the word you were looking for.</p>`;
       return;
     }
-    console.log(xhr.response);
+    console.log(xhr.response[0]);
+    console.log(xhr.response[0].word);
+
   };
 
   xhr.open("GET", `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
