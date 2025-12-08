@@ -22,3 +22,7 @@ button{
     height: 25px;
     margin-bottom: 13px;
 }
+
+#error{
+    color: red;
+}
