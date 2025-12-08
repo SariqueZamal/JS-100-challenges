@@ -3,3 +3,22 @@
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
 }
+
+#container{
+    margin:45px;
+    padding:75px;
+    background-color: blueviolet;
+}
+
+input{
+    margin: 11px;
+    width: 195px;
+    height: 21px;
+    border: none;
+}
+
+button{
+    width:125px;
+    height: 25px;
+    margin-bottom: 13px;
+}
