@@ -11,4 +11,21 @@ button.addEventListener("click", () => {
     }, 1000);
     return;
   }
+  getMeaning(word);
 });
+
+function getMeaning(word) {
+  let xhr = new XMLHttpRequest();
+  xhr.responseType = "json";
+
+  xhr.onload = () => {
+    if (xhr.response.title == "No Definitions Found") {
+      result.innerHTML = `<p id="error">Sorry Dude, we couldn't find definitions for the word you were looking for.</p>`;
+      return;
+    }
+    console.log(xhr.response);
+  };
+
+  xhr.open("GET", `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
+  xhr.send();
+}
