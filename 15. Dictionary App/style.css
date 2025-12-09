@@ -22,7 +22,7 @@ input{
 button{
     width:125px;
     height: 25px;
-    margin-bottom: 13px;
+    margin-bottom: 17px;
     background-color: #fff;
     border: none;
     font-size: 14px;
@@ -31,4 +31,8 @@ button{
 #error{
     color: red;
     font-size: 15px;
+}
+
+#result{
+    text-indent: 10px;
 }
