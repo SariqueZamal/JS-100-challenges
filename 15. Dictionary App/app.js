@@ -26,7 +26,11 @@ function getMeaning(word) {
       return;
     }
 
-    result.innerHTML = `<h4>Word: ${xhr.response[0].word}</h4><br>
+    result.innerHTML = `<h4>Word: ${xhr.response[0].word}</h4>
+    <audio controls>
+  <source src="${xhr.response[0].phonetics[0].audio}" type="audio/mp3">
+Your browser does not support the audio element.
+</audio><br><br>
     <h4>Meaning:</h4>
     <p>${xhr.response[0].meanings[0].definitions[0].definition}</p>
     <h4>synonym:</h4>
