@@ -29,8 +29,10 @@ function getMeaning(word) {
     result.innerHTML = `<h4>Word: ${xhr.response[0].word}</h4><br>
     <h4>Meaning:</h4>
     <p>${xhr.response[0].meanings[0].definitions[0].definition}</p>
+    <h4>synonym:</h4>
+    <p>${xhr.response[0].meanings[0].synonyms[0]}</p>
     `;
-    
+
     console.log(xhr.response[0]);
     console.log(xhr.response[0].word);
     console.log(xhr.response[0].meanings[0].definitions[0].definition);
