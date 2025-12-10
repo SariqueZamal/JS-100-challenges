@@ -14,7 +14,6 @@ button.addEventListener("click", () => {
   getMeaning(word);
 });
 
-
 function getMeaning(word) {
   let xhr = new XMLHttpRequest();
   xhr.responseType = "json";
@@ -31,15 +30,18 @@ function getMeaning(word) {
     let audio = xhr.response[0].phonetics[0].audio || "";
     let definitions = xhr.response[0].meanings[0].definitions;
     let defContent;
-    let synonyms = xhr.response[0].meanings[0].synonyms[0] || "";
-    let allSynonyms;
+    let synonyms = xhr.response[0].meanings[0].synonyms;
+    console.log(synonyms);
+    let allSynonyms = "Not Avialable";
 
-    for(let i = 0; i < definitions.length; i++){
-      defContent = `${defContent + definitions[i].definition}<br>`
+    for (let i = 0; i < definitions.length; i++) {
+      defContent = `${defContent + definitions[i].definition}<br>`;
     }
 
-    for()
-      
+    for (let i = 0; i < synonyms.length; i++) {
+      allSynonyms = `${allSynonyms + synonyms[i]}<br>`;
+    }
+
     result.innerHTML = `<h4>Word: ${word}</h4><br>
     <audio controls>
     <source src="${audio}" type="audio/mp3">
@@ -47,8 +49,8 @@ function getMeaning(word) {
     </audio><br><br>
     <h4>Meaning:</h4><br>
     <p>${defContent}</p><br>
-    <h4>synonym:</h4>
-    <p>${xhr.response[0].meanings[0].synonyms[0]}</p>
+    <h4>Synonym:</h4>
+    <p>${allSynonyms}</p>
     `;
 
     console.log(xhr.response[0]);
