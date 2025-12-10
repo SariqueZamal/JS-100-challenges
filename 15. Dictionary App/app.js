@@ -14,6 +14,7 @@ button.addEventListener("click", () => {
   getMeaning(word);
 });
 
+
 function getMeaning(word) {
   let xhr = new XMLHttpRequest();
   xhr.responseType = "json";
@@ -29,10 +30,13 @@ function getMeaning(word) {
     let word = xhr.response[0].word;
     let audio = xhr.response[0].phonetics[0].audio || "";
     let definitions = xhr.response[0].meanings[0].definitions;
-    let defContent;
+    let defContent = "";
     let synonyms = xhr.response[0].meanings[0].synonyms;
-    console.log(synonyms);
-    let allSynonyms = "Not Avialable";
+    let allSynonyms = "";
+
+    if(synonyms.length == 0){
+      allSynonyms = "Not Available";
+    }
 
     for (let i = 0; i < definitions.length; i++) {
       defContent = `${defContent + definitions[i].definition}<br>`;
@@ -47,15 +51,11 @@ function getMeaning(word) {
     <source src="${audio}" type="audio/mp3">
     Your browser does not support the audio element.
     </audio><br><br>
-    <h4>Meaning:</h4><br>
+    <h4>Meaning:-</h4><br>
     <p>${defContent}</p><br>
-    <h4>Synonym:</h4>
+    <h4>Synonym:-</h4>
     <p>${allSynonyms}</p>
     `;
-
-    console.log(xhr.response[0]);
-    console.log(xhr.response[0].word);
-    console.log(xhr.response[0].meanings[0].definitions[0].definition);
   };
 
   xhr.open("GET", `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
