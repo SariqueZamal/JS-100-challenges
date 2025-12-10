@@ -33,6 +33,6 @@ button{
     font-size: 15px;
 }
 
-#result{
-    text-indent: 10px;
+.def{
+    text-align: start;
 }
