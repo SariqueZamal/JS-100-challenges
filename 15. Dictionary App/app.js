@@ -11,9 +11,10 @@ button.addEventListener("click", () => {
     }, 1000);
     return;
   }
+
+  input.value = "";
   getMeaning(word);
 });
-
 
 function getMeaning(word) {
   let xhr = new XMLHttpRequest();
@@ -34,7 +35,7 @@ function getMeaning(word) {
     let synonyms = xhr.response[0].meanings[0].synonyms;
     let allSynonyms = "";
 
-    if(synonyms.length == 0){
+    if (synonyms.length == 0) {
       allSynonyms = "Not Available";
     }
 
