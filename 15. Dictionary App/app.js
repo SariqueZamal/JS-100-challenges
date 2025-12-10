@@ -26,13 +26,19 @@ function getMeaning(word) {
       return;
     }
 
-    result.innerHTML = `<h4>Word: ${xhr.response[0].word}</h4>
+    let word = xhr.response[0].word;
+    let audio = xhr.response[0].phonetics[0].audio || "";
+    let definitions = xhr.response[0].meanings[0].definitions[0].definition;
+    let synonyms = xhr.response[0].meanings[0].synonyms[0];
+
+    for(let i = 0; i < )
+    result.innerHTML = `<h4>Word: ${word}</h4><br>
     <audio controls>
-    <source src="${xhr.response[0].phonetics[0].audio}" type="audio/mp3">
+    <source src="${audio}" type="audio/mp3">
     Your browser does not support the audio element.
     </audio><br><br>
     <h4>Meaning:</h4>
-    <p>${xhr.response[0].meanings[0].definitions[0].definition}</p>
+    <p>${xhr.response[0].meanings[0].definitions[0].definition}</p><br>
     <h4>synonym:</h4>
     <p>${xhr.response[0].meanings[0].synonyms[0]}</p>
     `;
