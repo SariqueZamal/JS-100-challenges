@@ -48,10 +48,9 @@ function getMeaning(word) {
     }
 
     result.innerHTML = `<h4>Word: ${word}</h4><br>
-    <audio controls>
-    <source src="${audio}" type="audio/mp3">
+   ${audio ? `<audio controls> <source src="${audio}" type="audio/mp3">
     Your browser does not support the audio element.
-    </audio><br><br>
+    </audio>`: ""}<br><br>
     <u><h4>Meaning:-</h4></u><br>
     <p>${defContent}</p><br>
     <u><h4>Synonym:-</h4></u>
