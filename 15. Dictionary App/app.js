@@ -52,9 +52,9 @@ function getMeaning(word) {
     <source src="${audio}" type="audio/mp3">
     Your browser does not support the audio element.
     </audio><br><br>
-    <h4>Meaning:-</h4><br>
+    <u><h4>Meaning:-</h4></u><br>
     <p>${defContent}</p><br>
-    <h4>Synonym:-</h4>
+    <u><h4>Synonym:-</h4></u>
     <p>${allSynonyms}</p>
     `;
   };
