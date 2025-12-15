@@ -16,4 +16,6 @@ body {
 
 textarea{
     margin: 15px;
+    padding: 7px;
+    text-align: start;
 }
