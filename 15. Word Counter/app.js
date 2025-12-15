@@ -3,7 +3,7 @@ let result = document.querySelector("p");
 
 text.addEventListener("keypress", (event) => {
   let count = text.value.length;
-  result.innerText = `Total word count is ${count}`;
+  result.innerText = `Total letters are ${count}`;
 });
 
 text.addEventListener("keydown", (event) => {
@@ -15,5 +15,5 @@ text.addEventListener("keydown", (event) => {
   } else {
     count = text.value.length;
   }
-  result.innerText = `Total word count is ${count}`;
+  result.innerText = `Total letters are ${count}`;
 });
