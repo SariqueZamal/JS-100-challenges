@@ -1,6 +1,12 @@
+*{
+  margin: 0;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-
-
+body{
+  padding-top: 145px;
+}
 
 #container {
   margin: 45px 175px;
