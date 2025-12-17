@@ -15,4 +15,7 @@ button.addEventListener("click", () => {
       result.innerText = "";
     }, 1000);
   }
+
+  let tipsPerPerson = expense / person;
+  result.innerText = `Tips per person is ${tipsPerPerson}`;
 });
