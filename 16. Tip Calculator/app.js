@@ -23,4 +23,8 @@ button.addEventListener("click", () => {
 
     result.innerText = `Tips per person is ${tipsPerPerson}`;
   }
+
+  result.innerText =  `Tips for all the person expect last person is ${tipsPerPerson}
+  and Tips for last person is ${tipsForLastPerson}
+  `
 });
