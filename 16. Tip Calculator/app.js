@@ -19,15 +19,11 @@ button.addEventListener("click", () => {
   let tipsPerPerson = Math.round(expense / person);
   let tipsForLastPerson = expense - tipsPerPerson * (person - 1);
 
-  if(tipsPerPerson === tipsForLastPerson){
-
+  if (tipsPerPerson === tipsForLastPerson) {
     result.innerText = `Tips per person is ${tipsPerPerson}`;
-  }
-  else{
-
-    result.innerText =  `Tips for all the person expect last person is ${tipsPerPerson}
+  } else {
+    result.innerText = `Tips for all the person expect last person is ${tipsPerPerson}
     and Tips for last person is ${tipsForLastPerson}
-    `
+    `;
   }
-
 });
