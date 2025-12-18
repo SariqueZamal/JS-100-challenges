@@ -16,6 +16,6 @@ button.addEventListener("click", () => {
     }, 1000);
   }
 
-  let tipsPerPerson = expense / person;
+  let tipsPerPerson = Math.round(expense / person);
   result.innerText = `Tips per person is ${tipsPerPerson}`;
 });
