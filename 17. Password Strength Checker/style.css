@@ -3,3 +3,13 @@
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+body{
+    padding-top: 125px;
+}
+
+#container {
+  margin: 45px 175px;
+  padding: 45px;
+  box-shadow: rgb(0, 0, 0.5) 1px 0.1px 21px;
+}
