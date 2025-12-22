@@ -10,7 +10,10 @@ let specialChar = false;
 button.addEventListener("click", () => {
   let trimValue = password.value.trim();
 
-  if (
+  if (!trimValue) {
+    passwordStrength.innerText = "Please enter password";
+  } 
+  else if (
     /[a-z]/.test(trimValue) &&
     /[A-Z]/.test(trimValue) &&
     /[0-9]/.test(trimValue) &&
