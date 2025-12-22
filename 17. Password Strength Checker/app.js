@@ -22,10 +22,6 @@ button.addEventListener("click", () => {
       trimValue.includes("$") ||
       trimValue.includes("&"))
   ) {
-    lowercase = true;
-    uppercase = true;
-    number = true;
-    specialChar = true;
     passwordStrength.innerText = "Good Job!";
     return;
   } else {
