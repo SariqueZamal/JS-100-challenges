@@ -6,7 +6,9 @@ button.addEventListener("click", () => {
   let trimValue = password.value.trim();
 
   if (!trimValue) {
-    passwordStrength.innerText = "Please enter password";
+    passwordStrength.innerText = "Please enter a password. . .";
+    password.value = "";
+    return;
   } 
   else if (
     /[a-z]/.test(trimValue) &&
@@ -17,7 +19,9 @@ button.addEventListener("click", () => {
       trimValue.includes("$") ||
       trimValue.includes("&"))
   ) {
-    passwordStrength.innerText = "Good Job!";
+    passwordStrength.innerText =`Good Job!
+    This is a valid password. . .
+    `;
     return;
   } else {
     passwordStrength.innerText = "please enter a valid password";
