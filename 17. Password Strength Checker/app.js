@@ -9,7 +9,6 @@ let specialChar = false;
 
 button.addEventListener("click", () => {
   let trimValue = password.value.trim();
-  console.log(specialChar);
 
   if (
     /[a-z]/.test(trimValue) &&
