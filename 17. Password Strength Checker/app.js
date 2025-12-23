@@ -26,6 +26,8 @@ button.addEventListener("click", () => {
   } else {
     passwordStrength.innerText = `Your password is weak!
     - It should contain one Uppercase Letter, one Lowercase letter, one Number & one Special Character.
+    - Allowable Special Character @, #, $ and &.
+    - Password must have 8 characters.
     `;
     return;
   }
