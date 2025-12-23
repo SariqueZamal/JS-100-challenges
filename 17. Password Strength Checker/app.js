@@ -4,13 +4,13 @@ let button = document.querySelector("button");
 
 button.addEventListener("click", () => {
   let trimValue = password.value.trim();
-  console.log(trimValue.length);
 
   if (!trimValue) {
-    passwordStrength.innerText = "Please enter a password. . .";
     password.value = "";
+    passwordStrength.innerText = "Please enter a password. . .";
     return;
-  } else if (
+  } 
+  else if (
     /[a-z]/.test(trimValue) &&
     /[A-Z]/.test(trimValue) &&
     /[0-9]/.test(trimValue) &&
@@ -20,12 +20,18 @@ button.addEventListener("click", () => {
       trimValue.includes("$") ||
       trimValue.includes("&"))
   ) {
+    password.value = "";
     passwordStrength.innerText = `Good Job!
-    This is a valid password. . .
+
+    Your password is ${trimValue}
     `;
     return;
   } else {
+    password.value = "";
     passwordStrength.innerText = `Your password is weak!
+
+    Your entered "${trimValue}"
+
     - It should contain one Uppercase Letter, one Lowercase letter, one Number & one Special Character.
     - Allowable Special Character @, #, $ and &.
     - Password must have 8 characters.
