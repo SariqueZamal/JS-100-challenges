@@ -24,7 +24,9 @@ button.addEventListener("click", () => {
     `;
     return;
   } else {
-    passwordStrength.innerText = "please enter a valid password";
+    passwordStrength.innerText = `Your password is weak!
+    - It should contain one Uppercase Letter, one Lowercase letter, one Number & one Special Character.
+    `;
     return;
   }
 });
