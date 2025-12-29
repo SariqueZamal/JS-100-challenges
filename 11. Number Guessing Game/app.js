@@ -19,10 +19,11 @@ button.addEventListener("click", () => {
     return;
   }
 
-  // Generating random number between 1 to 100.
+  // Generating random number between 1 to 100
   let random = Math.floor(Math.random() * 100);
 
-  // Check the random number with the user input.
+  // Check the random number with the user input
+  
   if (number == random) {
     input.value = "";
     result.style.color = "green";
