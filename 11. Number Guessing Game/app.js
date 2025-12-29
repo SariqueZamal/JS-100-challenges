@@ -3,10 +3,11 @@ let button = document.querySelector("button");
 let result = document.querySelector("p");
 
 button.addEventListener("click", () => {
-  // Convert text into Number.
+  // Convert text into Number
   let number = Number(input.value);
 
   // Checking if Not a Number & number is zero
+
   if (Number.isNaN(number) || number == 0) {
     result.style.color = "red";
     result.innerText = "Please Enter a valid Number";
