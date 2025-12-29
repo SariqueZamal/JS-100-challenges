@@ -3,6 +3,7 @@ let button = document.querySelector("button");
 let result = document.querySelector("p");
 
 button.addEventListener("click", () => {
+
   // Convert text into Number
   let number = Number(input.value);
 
@@ -19,11 +20,12 @@ button.addEventListener("click", () => {
     return;
   }
 
+
   // Generating random number between 1 to 100
   let random = Math.floor(Math.random() * 100);
 
   // Check the random number with the user input
-  
+
   if (number == random) {
     input.value = "";
     result.style.color = "green";
@@ -33,6 +35,6 @@ button.addEventListener("click", () => {
     input.value = "";
     result.style.color = "red";
     result.innerText = `You entered the wrong anwer.
-        Correct ans is ${random}.`;
+    Correct ans is ${random}.`;
   }
 });
