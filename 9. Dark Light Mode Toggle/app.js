@@ -9,13 +9,15 @@ let light1 = `<i id="one" class="fa-solid fa-toggle-off"></i>`;
 let light2 = `<i id="two" class="fa-regular fa-moon"></i>`;
 
 one.addEventListener("click", () => {
+
   if (one.className == "fa-solid fa-toggle-off") {
     nav.innerHTML = `<i id="one" class="fa-solid fa-toggle-on"></i>
     <i id="two" class="fa-solid fa-circle-half-stroke"></i>`;
     nav.style.backgroundColor = "white";
     nav.style.color = "black";
     body.style.backgroundColor = "black";
-  } else {
+  } 
+  else {
     nav.innerHTML = `<i id="one" class="fa-solid fa-toggle-off"></i>
     <i id="two" class="fa-regular fa-moon"></i>`;
     nav.style.backgroundColor = "black";
