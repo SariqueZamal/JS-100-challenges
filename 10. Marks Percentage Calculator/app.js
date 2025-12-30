@@ -7,8 +7,7 @@ button.addEventListener("click", () => {
   let markSec = Number(markSecured.value);
   let total = Number(totalMark.value);
 
-  if (
-    Number.isNaN(markSec) ||
+  if (Number.isNaN(markSec) ||
     Number.isNaN(total) ||
     markSec == 0 ||
     total == 0
