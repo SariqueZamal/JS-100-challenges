@@ -8,6 +8,7 @@ text.addEventListener("keypress", (event) => {
 
 text.addEventListener("keydown", (event) => {
   let count;
+  
   if (event.key === "Backspace") {
     count = text.value.length;
   } else if (event.key === "Delete") {
